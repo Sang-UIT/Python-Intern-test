@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích điểm thi THPT 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="main-header">
+          <div class="breadcrumb">
+            <span>Trang chủ</span> <!-- Thay đổi nội dung này tùy theo trang -->
+        </div>
+        </header>
+
+        <aside id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="thongke.html">Thống kê chuyên sâu</a></li>
+                    <li><a href="upload.html">Upload dữ liệu</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="content">
+            <section id="search-section">
+                <h2>Tra cứu điểm thi</h2>
+                <label for="sbd-input">Nhập số báo danh:</label>
+                <input type="text" id="sbd-input" placeholder="Nhập SBD...">
+                <button id="search-button">Tra cứu</button>
+                <div id="search-results">
+                    <!-- Kết quả tra cứu -->
+                </div>
+            </section>
+
+            <section id="filter-section">
+                <h2>Thống kê nhanh</h2>
+                <label for="subject-select">Chọn môn:</label>
+                <select id="subject-select">
+                    <option value="toan">Toán</option>
+                    <option value="ngu_van">Ngữ văn</option>
+                    <option value="ngoai_ngu">Ngoại ngữ</option>
+                    <option value="vat_li">Vật lý</option>
+                    <option value="hoa_hoc">Hóa học</option>
+                    <option value="sinh_hoc">Sinh học</option>
+                    <option value="lich_su">Lịch sử</option>
+                    <option value="dia_li">Địa lý</option>
+                    <option value="gdcd">GDCD</option>
+                </select>
+
+                <label for="level-select">Chọn mức điểm:</label>
+                <select id="level-select">
+                    <option value=">=8">>= 8 điểm</option>
+                    <option value="6-8">8 > điểm >= 6</option>
+                    <option value="4-6">6 > điểm >= 4</option>
+                    <option value="<4">< 4 điểm</option>
+                </select>
+                <button id="filter-button">Lọc</button>
+                <ul id="filtered-list">
+                  <!-- Danh sách SBD đã lọc -->
+                </ul>
+            </section>
+
+            <section id="chart-section">
+                <h2>Thống kê số lượng theo mức điểm</h2>
+                <canvas id="level-chart"></canvas>
+            </section>
+
+            <section id="top-students-section">
+                <h2>Top 10 học sinh khối A</h2>
+                <table id="top-students-table">
+                    <thead>
+                        <tr>
+                            <th>SBD</th>
+                            <th>Toán</th>
+                            <th>Lý</th>
+                            <th>Hóa</th>
+                            <th>Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu top 10 -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2024 - Trang phân tích điểm thi THPT</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

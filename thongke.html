@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê chuyên sâu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="main-header">
+            <div class="breadcrumb">
+                <span>Thống kê chuyên sâu</span>
+            </div>
+        </header>
+
+        <aside id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="thongke.html">Thống kê chuyên sâu</a></li>
+                    <li><a href="upload.html">Upload dữ liệu</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="content">
+            <section id="subject-stats">
+                <h2>Chọn môn để thống kê</h2>
+                <select id="subject-select-thongke">
+                    <option value="toan">Toán</option>
+                    <option value="ngu_van">Ngữ văn</option>
+                    <option value="ngoai_ngu">Ngoại ngữ</option>
+                    <option value="vat_li">Vật lý</option>
+                    <option value="hoa_hoc">Hóa học</option>
+                    <option value="sinh_hoc">Sinh học</option>
+                    <option value="lich_su">Lịch sử</option>
+                    <option value="dia_li">Địa lý</option>
+                    <option value="gdcd">GDCD</option>
+                </select>
+                <button id="stats-button">Thống Kê</button>
+                <div class="chart">
+                    <h2>Biểu đồ phổ điểm</h2>
+                    <canvas id="score-distribution-chart"></canvas>
+                </div>
+
+                <!-- Thêm các phần tử khác cho các tính năng thống kê khác tại đây -->
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 - Trang phân tích điểm thi THPT</p>
+        </footer>
+    </div>
+
+    <script src="thongke.js"></script>
+</body>
+</html>
