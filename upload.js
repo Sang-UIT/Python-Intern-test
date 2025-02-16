@@ -24,11 +24,11 @@ uploadButton.addEventListener("click", async () => {
             const result = await response.json();
             uploadStatus.textContent = `File "${result.filename}" đã được upload và import thành công!`;
 
-            // *QUAN TRỌNG*: Cập nhật lại dữ liệu trên trang
-            updateChart();         // Cập nhật biểu đồ (trang chủ)
-            updateTop10Table();    // Cập nhật top 10 (trang chủ)
+
+            updateChart();         
+            updateTop10Table();    
             if (typeof updateScoreDistributionChart === 'function'){
-                updateScoreDistributionChart(); // Cập nhật biểu đồ (trang thống kê, nếu có)
+                updateScoreDistributionChart(); 
             }
 
         } else {

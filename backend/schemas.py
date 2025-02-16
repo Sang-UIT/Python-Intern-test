@@ -18,7 +18,7 @@ class DiemThiBase(BaseModel):
 
 
 class DiemThiCreate(DiemThiBase):
-    pass  # Kế thừa từ DiemThiBase
+    pass  
 
 
 class DiemThi(DiemThiBase):

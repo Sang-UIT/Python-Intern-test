@@ -128,7 +128,7 @@ async function updateChart() {
 }
 
 document.addEventListener("DOMContentLoaded", updateChart);
-subjectSelect.addEventListener("change", updateChart); // Không cần gọi updateChart() ở đây
+subjectSelect.addEventListener("change", updateChart); 
 
 // --- Top 10 học sinh khối A ---
 const topStudentsTable = document.getElementById("top-students-table");
