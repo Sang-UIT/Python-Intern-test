@@ -13,27 +13,13 @@ from .schemas import Top10KhoiA
 app = FastAPI()
 
 
-origins = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://192.168.1.68:8080",  
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-     "http://localhost",
-    "http://127.0.0.1",
-    "https://diemthithpt.netlify.app"
-    "diemthithpt.netlify.app/:1",
-
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  
-    allow_headers=["*"],  
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-
 create_tables()
 
 @app.post("/upload-csv/")
