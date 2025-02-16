@@ -15,7 +15,7 @@ uploadButton.addEventListener("click", async () => {
     formData.append("file", file);
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/upload-csv/", {
+        const response = await fetch("https://python-intern-test.onrender.com/upload-csv/", {
             method: "POST",
             body: formData,
         });
